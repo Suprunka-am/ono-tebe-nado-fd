@@ -57,7 +57,7 @@
   min-height: 757px;
   margin: 0 auto;
   background-image: url(../images/cover.jpg);
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -120,7 +120,7 @@
   position: absolute;
   z-index: 2;
   display: flex;
-  align-items: center;       
+  align-items: center;
   gap: 20px;
   width: 1000px;
   height: 51px;
@@ -130,7 +130,7 @@
   font-weight: 400;
   font-size: 22px;
   text-transform: uppercase;
-  word-spacing: 19px; 
+  word-spacing: 19px;
 }
 
 .bet-button {
@@ -155,13 +155,13 @@
 }
 .lots__heading {
  padding-left: 40px;
- font-weight: 700;  
+ font-weight: 700;
  font-size: 40px;
  text-transform: uppercase;
 }
 
 .lots__card-list {
-  display: flex; 
+  display: flex;
   flex-wrap: wrap;
   flex-grow: 1;
   justify-content: space-between;
