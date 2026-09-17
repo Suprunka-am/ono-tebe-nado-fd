@@ -93,7 +93,7 @@
 .aligned-text {
   width: 100%;
   height: 115px;
-  letter-spacing: 30%; 
+  letter-spacing: 30%;
 }
 
 .aligned-text_left {
@@ -206,6 +206,7 @@
   font-size: 20px;
   text-decoration: none;
   text-transform: none;
+  align-content: flex-end;
 }
 
 .card_type_film {
@@ -264,7 +265,7 @@
   height: 114px;
 }
 
-.about__title{
+.about__title {
   display: flex;
   flex-direction: column;
   width: 693px;
