@@ -1,16 +1,16 @@
-/* место для вашего кода */
+/*Начало Шапки страницы */
 .header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  height: 293px;
-  padding: 0 50px 0 50px;
+  padding: 93px 50px 94px 50px;
   font-size: 18px;
 }
 
+/*Начало меню шапки*/
 .header__links-list {
   display: flex;
-  gap: 26px;
+  gap: 20px;
   padding-left: 2px;
   list-style: circle;
 }
@@ -22,7 +22,9 @@
 .header__link {
   padding-right: 13px;
 }
+/*Конец меню*/
 
+/*Начало логотипа*/
 .header__logo {
   display: block;
   width: 100%;
@@ -33,7 +35,9 @@
   width: 148px;
   height: 105px;
 }
+/*Окончание логотипа*/
 
+/*Начало Адреса в шапке сайта*/
 .address {
   display: flex;
   flex-direction: column;
@@ -48,14 +52,18 @@
   justify-self:end;
   padding-right: 32px;
 }
+/*Окончание Адреса в шапке сайта*/
+/*Окончание шапки сайта*/
 
+/*Основное тело сайта*/
+/*Раздел "Оно тебе надо"*/
 .cover {
   position: relative;
   z-index: 0;
   display: flex;
-  height: 757px;
-  min-height: 757px;
-  margin: 0 auto;
+  flex-direction: column;
+  padding-bottom: 50px;
+  max-height: 757px;
   background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -74,13 +82,11 @@
 
 .cover__title {
   position: relative;
-  top: 165px;
-  left: 50px;
+  padding-top: 165px;
+  padding-left: 50px;
   z-index: 2;
   display: flex;
   flex-direction: column;
-  width: 1000px;
-  height: 385px;
   color: #FFFFFF;
   font-weight: 700;
   font-size: 100px ;
@@ -88,28 +94,28 @@
   letter-spacing: 0.3em;
   text-transform: uppercase;
   white-space: nowrap;
+  padding-bottom: 5px;
 }
 
 .aligned-text {
   width: 100%;
-  height: 115px;
   letter-spacing: 30%;
 }
 
 .aligned-text_left {
+  top: 165px;
+  left: 50px;
   text-align: start;
 }
 
 .aligned-text_center {
-  padding-top: 21px;
-  padding-left: 28px;
-  text-align: center;
+  padding-top: 20px;
+  padding-left: 330px;
 }
 
 .aligned-text_right {
-  padding-top: 40px;
-  padding-left: 50px;
-  text-align: end;
+  padding-top: 20px;
+  padding-left: 613px;
 }
 
 .no-letter-spacing {
@@ -117,70 +123,85 @@
 }
 
 .cover__description {
-  position: absolute;
-  z-index: 2;
   display: flex;
-  align-items: center;
-  gap: 20px;
-  width: 1000px;
-  height: 51px;
-  padding-top: 682px;
+  z-index: 2;
+  position: relative;
   padding-left: 50px;
   color: #FFFFFF;
   font-weight: 400;
   font-size: 22px;
   text-transform: uppercase;
   word-spacing: 19px;
+  margin-top: 100px;
+}
+
+.cover__description-text {
+  padding-top: 16px;
 }
 
 .bet-button {
-  position: absolute;
   width: 256px;
-  height: 51px;
-  margin-left: 742px;
+  padding: 12px 30px;
+  margin-bottom: 50px;
+  margin-left: 105px;
   border: 1px solid white;
   color: #FFFFFF;
   font-weight: 400;
   font-size: 22px;
   text-transform: uppercase;
   background-color: transparent;
-}
+  }
+/*Окончание раздела "Оно тебе надо"*/
 
+/*Начало раздела с карточками "Лоты"*/
 .lots {
   width: 1052px;
-  height: 723px;
+  height: 100%;
   margin-top: 180px;
   margin-left: 25px;
-
 }
-.lots__heading {
+
+.lots__heading { /*Заголовок раздела*/
  padding-left: 40px;
  font-weight: 700;
  font-size: 40px;
  text-transform: uppercase;
 }
+/*Начинаем задавать дизайн карточек*/
 
 .lots__card-list {
-  display: flex;
-  flex-wrap: wrap;
-  flex-grow: 1;
+  display: flex; /*Карточки помещаем во флекс контейнер для корректного размещения на странице (по 3 в ряд)*/
+  flex-wrap: wrap; /*Разрешаем перенос карточек при их добавлении*/
+  flex-grow: 1; /*Разрешаем расширение при наличии места*/
   justify-content: space-between;
-  gap: 25px;
-  width: 1052px;
+  gap: 25px; /*Пространство между карточками*/
+  width: 1052px; /*Ширина окна*/
   margin-top: 27px;
   margin-bottom: 32px;
   color: #FFFFFF;
-  list-style: none;
-}
+  list-style: none; /*Убираем маркеры списка*/
+  height: 100%;
+ }
+
 .lots__card-list-item {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+}
+
+.card {
+   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   width: 334px;
   min-width: 334px;
-  height: 596px;
+  min-height: 596px;
   margin: auto;
   padding-top: 48px;
   padding-bottom: 48px;
@@ -189,16 +210,18 @@
   background-size: cover;
 }
 
-.card-link {
+.card__title {
   z-index: 2;
   width: 254px;
   height: 100%;
   font-size: 22px;
   text-decoration-line: underline;
   text-transform: uppercase;
+  font-weight: 700;
+  display: block;
 }
 
-.card {
+.card__text {
   position: relative;
   z-index: 2;
   width: 254px;
@@ -207,6 +230,7 @@
   text-decoration: none;
   text-transform: none;
   align-content: flex-end;
+  display: block;
 }
 
 .card_type_film {
@@ -226,19 +250,19 @@
 
 .lots__look-more-link {
   width: 192px;
-  height: 23px;
   padding-left: 40px;
   font-weight: 400;
   font-size: 20px;
   text-decoration: underline;
 }
+/*Конец описания дизайна карточек*/
 
+/*Начало описания дизайна блока "Об аукционе"*/
 .about {
   display: grid;
   grid-template-columns: 334px 1fr;
   gap: 23px;
   width: 1052px;
-  height: 595px;
   margin-top: 120px;
   margin-left: 25px;
 }
@@ -255,7 +279,7 @@
   align-items: center;
   width: 240px;
   height: 240px;
-  border-radius: 240px;
+  border-radius: 50%;
   background-color: black;
 }
 
@@ -269,7 +293,6 @@
   display: flex;
   flex-direction: column;
   width: 693px;
-  height: 449px;
   padding-top: 133px;
 }
 
@@ -285,19 +308,21 @@
   justify-content: end;
   gap: 1.5rem;
   width: 688px;
-  height: 100%;
   margin-top: 100px;
   font-weight: 400;
   font-size: 20px;
 
 }
+/*Конец описания дизайна блока "Об аукционе"*/
 
+/*Начало описания Подвала*/
 .footer {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: start;
   margin-top: 180px;
   padding: 0 50px 0 50px;
+  margin-bottom: 82px;
 }
 
 .footer__menu {
@@ -313,17 +338,17 @@
   min-width: 164px;
   text-align: center;
   list-style: none;
-
 }
 
 .footer__social-list {
   display: flex;
   justify-self: end;
   gap: 48px;
-  height: 48px;
   list-style: none;
 }
 
 .footer__social-icon {
-  max-height: 48px;
+  height: 48px;
+  width: 48px;
 }
+/*Конец описания Подвала*/
