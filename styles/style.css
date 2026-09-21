@@ -62,8 +62,8 @@
   z-index: 0;
   display: flex;
   flex-direction: column;
-  padding-bottom: 50px;
-  max-height: 757px;
+  min-height: 757px;
+  padding: 165px 50px 50px 50px;
   background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -81,12 +81,9 @@
 }
 
 .cover__title {
-  position: relative;
-  padding-top: 165px;
-  padding-left: 50px;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
+    position: relative;
+    display: flex;
+    flex-direction: column;
   color: #FFFFFF;
   font-weight: 700;
   font-size: 100px ;
@@ -94,28 +91,26 @@
   letter-spacing: 0.3em;
   text-transform: uppercase;
   white-space: nowrap;
-  padding-bottom: 5px;
 }
 
 .aligned-text {
+  display: block;
   width: 100%;
   letter-spacing: 30%;
 }
 
 .aligned-text_left {
-  top: 165px;
-  left: 50px;
   text-align: start;
 }
 
 .aligned-text_center {
   padding-top: 20px;
-  padding-left: 330px;
+  text-align: center;
 }
 
 .aligned-text_right {
   padding-top: 20px;
-  padding-left: 613px;
+  text-align: end;
 }
 
 .no-letter-spacing {
@@ -123,16 +118,15 @@
 }
 
 .cover__description {
-  display: flex;
-  z-index: 2;
   position: relative;
-  padding-left: 50px;
+  z-index: 2;
+  display: flex;
+  margin-top: 105px;
   color: #FFFFFF;
   font-weight: 400;
   font-size: 22px;
   text-transform: uppercase;
   word-spacing: 19px;
-  margin-top: 100px;
 }
 
 .cover__description-text {
@@ -141,10 +135,9 @@
 
 .bet-button {
   width: 256px;
-  padding: 12px 30px;
-  margin-bottom: 50px;
-  margin-left: 105px;
+  margin-left: 100px;
   border: 1px solid white;
+  padding: 12px 30px;
   color: #FFFFFF;
   font-weight: 400;
   font-size: 22px;
@@ -176,11 +169,11 @@
   justify-content: space-between;
   gap: 25px; /*Пространство между карточками*/
   width: 1052px; /*Ширина окна*/
+  height: 100%;
   margin-top: 27px;
   margin-bottom: 32px;
   color: #FFFFFF;
   list-style: none; /*Убираем маркеры списка*/
-  height: 100%;
  }
 
 .lots__card-list-item {
@@ -212,25 +205,25 @@
 
 .card__title {
   z-index: 2;
+  display: block;
   width: 254px;
   height: 100%;
+  font-weight: 700;
   font-size: 22px;
   text-decoration-line: underline;
   text-transform: uppercase;
-  font-weight: 700;
-  display: block;
 }
 
 .card__text {
   position: relative;
   z-index: 2;
+  display: block;
+  align-content: flex-end;
   width: 254px;
   height: 100%;
   font-size: 20px;
   text-decoration: none;
   text-transform: none;
-  align-content: flex-end;
-  display: block;
 }
 
 .card_type_film {
@@ -321,8 +314,8 @@
   grid-template-columns: 1fr min-content 1fr;
   align-items: start;
   margin-top: 180px;
-  padding: 0 50px 0 50px;
   margin-bottom: 82px;
+  padding: 0 50px 0 50px;
 }
 
 .footer__menu {
@@ -348,7 +341,7 @@
 }
 
 .footer__social-icon {
-  height: 48px;
   width: 48px;
+  height: 48px;
 }
 /*Конец описания Подвала*/
